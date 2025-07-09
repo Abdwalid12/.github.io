@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <title>Agence Al Farah</title>
+    <style>
+        :root {
+            --yellow-light: #f7dc6f;
+            --gold: #e6c200;
+            --dark: #222;
+            --gray: #f3f3f3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: linear-gradient(to right, var(--yellow-light), white, var(--yellow-light));
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            margin: 0 25px;
+            position: relative;
+            top: 20px;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('acceuil.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 150px;
+            width: 100%;
+        }
+
+        .location {
+            text-align: center;
+            margin: 20px;
+            font-size: 16px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius:  8px;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+       footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        footer div {
+            margin: 10px 0;
+        }
+
+        footer .logo img {
+            height: 60px;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="../Acceuil/Accueil.html">Accueil</a>
+            <a href="reservation.html">Réservation</a>
+             <img src="noir.png" alt="Logo" class="logo">
+            <a href="../walid2/inscription.html">Inscription</a>
+            <a href="../Acceuil/Accueil.html">À propos de nous</a>
+        </nav>
+        
+    </header>
+
+    <div class="hero">
+        Plus que des salles : des lieux pour vos plus belles histoires.
+    </div>
+
+    <div class="location">
+        <p>Rabat, Salé, Témara</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="../visual html/tazi/tazi2.html">
+<img src="tazi palais.webp" alt="Palais Tazi">
+                </a>
+                
+                <p>Palais Tazi</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="../visual html/niama/niamasite.html" >
+                                    <img src="salle de fete niama.webp" alt="Salle des fêtes Niama">
+
+                </a>                
+                <p>Salle des fêtes Niama</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/nakhil/nakhil2.html" >
+                                    <img src="palais annakhil.jpg" alt="Palais Annakhil">
+
+                </a>
+                <p>Palais Annakhil</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/rabatpalace/palacerabat2.html" >
+                                    <img src="rabat palace.webp" alt="Rabat Palace">
+
+                </a>
+                <p>Rabat Palace</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/Kabbaj/kabbaj2.html">
+                                    <img src="ksar kabbaj.webp" alt="Ksar Kabbaj">
+
+                </a>
+                <p>Ksar Kabbaj</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/Samraa/samraa2.html" >
+                                    <img src="salle des fetes samraa.webp" alt="Salle des fêtes Sanrisa">
+
+                </a>
+                <p>Salle des fêtes Samraa</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/walid/walid.html" >
+                                    <img src="ip events.webp" alt="IP Events">
+
+                </a>
+                <p>IP Events</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/Trachen/Trachen.html">
+                                    <img src="palais trachen.webp" alt="Palais Trachen">
+
+                </a>
+                <p>Palais Trachen</p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="../visual html/narjiss/Narjiss.html" >
+                                    <img src="Salle narjiss.webp" alt="Salle des fêtes Narjiss">
+
+                </a>
+                <p>Salle des fêtes Narjiss</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h4>Villes</h4>
+            <p>Rabat<br>Salé<br>Temara</p>
+        </div>
+        <div>
+            <h4>AgenceAlFarah</h4>
+            <p>Adresse : Rabat<br>Tel : +212128456788</p>
+        </div>
+        <div class="logo">
+            <img src="Plan de travail 1.png" alt="Agence Al Farah">
+        </div>
+        <div>
+            <h4>Suivez nous sur</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/agence_al_farah/"><i class="fi fi-brands-instagram"></i></a>
+                <a href="https://www.facebook.com/agencealfarah"><i class="fi fi-brands-facebook"></i></a>
+                <a href="https://wa.me/212128456788"><i class="fi fi-brands-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

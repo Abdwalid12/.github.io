@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <title>Palais Trachen | Agence Al Farah</title>
+    <style>
+        :root {
+            --yellow-light: #f7dc6f;
+            --gold: #e6c200;
+            --dark: #222;
+            --gray: #f3f3f3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: linear-gradient(to right, var(--yellow-light), white, var(--yellow-light));
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+                header {            background-image: linear-gradient(to right, var(--yellow-light), white, var(--yellow-light));            display: flex;            align-items: center;            justify-content: space-around;            padding: 15px 20px;            border-bottom: 1px solid var(--gold);        }
+
+        header nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: bold;
+            position: relative;
+            top: 60px;
+        }
+
+        .logo img {
+            height: 120px;
+            margin: 10px;
+        }
+
+        .hero {
+            background-image: url('acceuil.jpeg');
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: cover center;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            width: 100%;
+            height: 30vh;
+        }
+
+        .date-badge {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+           
+        }
+        .date-badge p{
+background-color: var(--white);
+            padding: 5px 10px;
+            margin: 15px auto;
+            display: inline-block;
+             text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-section {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-section img {
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .event-details {
+            width: 50%;
+        }
+
+        .event-details h2 {
+            margin-bottom: 10px;
+        }
+
+        .event-details p {
+            margin-bottom: 10px;
+        }
+
+        .event-details strong {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .event-details button {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .testimonials {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+
+        .testimonial {
+            background-color: var(--gray);
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .lign{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .fi-ss-star{
+            color: orange;
+        }
+        .stars{
+            display: flex;
+        }
+        .testimonial-icon {
+            font-size: 24px;
+        }
+
+        .map {
+            width: 100%;
+            height: 150px;
+            background: url('https://maps.gstatic.com/tactile/basepage/pegman_sherpa-2x.png') center/cover no-repeat;
+            position: relative;
+            margin-top: 20px;
+           
+        }
+        .map img{
+           width: 100%;
+            height: 180px;
+ object-fit: cover;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        footer div {
+            margin: 10px 0;
+        }
+
+        footer .logo img {
+            height: 90px;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .modal-content input,
+        .modal-content textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        .modal-content button {
+            background-color: var(--gold);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .close-button {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .hero {            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('acceuil.jpeg');            background-size: cover;            background-position: center;            color: white;            text-align: center;            padding: 60px 20px;            font-size: 20px;            font-weight: bold;            height: 150px;            width: 100%;            filter: grayscale(30%);        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul style="display: flex; gap: 20px; list-style: none;">
+                <li><a href="../../Acceuil/Accueil.html">Accueil</a></li>
+                <li><a href="../../reservation/reservation.html">Réservation</a></li>
+                 <div class="logo">
+
+            <img src="logoagence.png" alt="Agence Al Farah">
+        </div>
+                <li><a href="../../walid2/inscription.html">Inscription</a></li>
+                <li><a href="../../Acceuil/Accueil.html">À propos de nous</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h3>Plus que des salles : des lieux pour vos plus belles histoires…</h3>
+    </section>
+
+    <div class="date-badge">
+        <p>dim. 04 mai</p>
+    </div>
+
+    <section class="main-section">
+        <img src="palais trachen.webp" alt="Événement">
+        <div class="event-details">
+            <h2>Palais Trachen</h2>
+            <p>
+                Le Palais Trachen, à Rabat, est une salle de fêtes prestigieuse au charme marocain, idéale pour mariages
+                  et réceptions dans un cadre raffiné et authentique.
+            </p>
+            <strong>Coordonnées:</strong>
+            <p>+212 6 61 23 45 67<br>Adresse: Quartier Médina, Rabat.</p>
+            <button onclick="openModal()">Réserver</button>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial">
+             <div class="lign">
+                 <div class="testimonial-icon">👤</div> 
+                 <p>“Nous avons passé un moment extraordinaire au Palais Trachen !”</p>
+             </div>
+            <div class="stars" >
+                <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="lign">
+                 <div class="testimonial-icon">👤</div> <p>“Tout est parfait et je lui recommande de réserver avec lui pour tout événement mariage ou fiançailles.”</p>
+            </div>
+           <div class="stars" >
+                <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="lign">
+            <div class="testimonial-icon">👤</div> 
+            <p>“Cet endroit respire le charme et l'hospitalité marocaine.”</p>
+
+            </div>
+            <div class="stars" >
+                <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="lign">
+                <div class="testimonial-icon">👤</div>
+                <p> "Le palais est magnifique et très authentique."</p>
+            </div>
+           <div class="stars" >
+                <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="map">
+        <a href="https://www.google.com/maps/place/Palais+Trachen+(Kasr+Trachen)/@34.0255668,-6.8466125,17z/data=!3m1!4b1!4m6!3m5!1s0xda76def388ed3d5:0x5707fb3ad7df9581!8m2!3d34.0255668!4d-6.8440376!16s%2Fg%2F11tt0xr6c2?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">
+            <img src="locatrachen.jpg" alt="Localisation Palais Trachen" style="position: relative; top: -25px;">
+        </a>
+    </div>
+
+    <footer>
+        <div>
+            <h4>Villes</h4>
+            <p>Rabat<br>Salé<br>Temara</p>
+        </div>
+        <div>
+            <h4>AgenceAlFarah</h4>
+            <p>Adresse : Rabat<br>Tel : +212128456788</p>
+        </div>
+        <div class="logo">
+            <img src="agenceenblanc.png" alt="Agence Al Farah">
+        </div>
+        <div>
+            <h4>Suivez nous sur</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/agencealfarah" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+                <a href="https://www.facebook.com/agencealfarah" target="_blank"><i class="fi fi-brands-facebook"></i></a>
+                <a href="https://wa.me/212128456788" target="_blank"><i class="fi fi-brands-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2025 Agence Al Farah. Tous droits réservés.
+    </div>
+
+
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Réserver votre événement</h3>
+            <input type="text" placeholder="Nom">
+            <input type="date">
+            <textarea rows="4" placeholder="Message..."></textarea>
+            <button onclick="submitForm()">Envoyer</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("reservationModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("reservationModal").style.display = "none";
+        }
+
+        function submitForm() {
+            alert("Votre demande a été envoyée !");
+            closeModal();
+        }
+
+        window.onclick = function (event) {
+            let modal = document.getElementById("reservationModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
